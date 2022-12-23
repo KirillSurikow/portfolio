@@ -1,0 +1,42 @@
+.name {
+    color: white;
+    font-size: 27px;
+}
+
+.menu {
+    display: flex;
+
+    .linkWrapper {
+        margin-left: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+
+        &:hover{
+            color: #00BEE8 !important;
+            opacity: 1 !important;
+        }
+    }
+
+    .menuLink{
+        font-weight: 400;
+        font-size: 23px;
+        color: white;
+        transition: all 250ms ease-in-out;
+
+        .hovering{
+            color: #00BEE8 !important;
+        }
+    }
+
+    .underline{
+        background-color: #4B47FF;
+        width: 55px;
+        height: 3px;
+        opacity: 0;
+        transition: all 250ms ease-in-out;
+
+        .displaying{
+            opacity: 1 !important;
+        }
+    }
+}

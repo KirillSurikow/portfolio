@@ -1,0 +1,68 @@
+.introductionBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.largePortraet{
+    width: 100%;
+}
+
+.introductionCharacters{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+
+
+    .upperBox{
+        display: flex;
+    }
+
+    .talkBtn{
+        background-color: #00BEE8;
+        box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        width: 165px;
+        height: 58px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 23px;
+        font-weight: 400;
+        margin-top: 30px;
+        transition: all 250ms ease-in-out;
+        cursor: pointer;
+
+        &:hover{
+            background-color: #4B47FF;
+            transform: scale(1.1);
+        }
+    }
+
+    .smallBox{
+        writing-mode: tb-rl;
+        transform: rotate(-180deg);
+        text-align: center;
+        font-size: 64px;
+        font-weight: 400;
+    }
+
+    .name{
+        font-size: 78px;
+        font-weight: 700;
+    }
+
+    .title{
+       font-size: 54px;
+       font-weight: 400;
+       color: #4B47FF;
+    }
+
+    .curveBox{
+        position: absolute;
+        z-index: -1;
+    }
+}

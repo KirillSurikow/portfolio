@@ -1,0 +1,16 @@
+.alternativeBackground{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.curveBox{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+
+    img{
+        width: 100%;
+    }
+}
