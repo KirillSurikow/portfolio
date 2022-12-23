@@ -6,12 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-    highlight(){
-      console.log()
+  aboutMeHover : boolean = false;
+  skillsHover : boolean = false;
+  portfolioHover : boolean = false;
+
+    highlight(link : any){
+       link = true;
+       console.log(link);
     }
 
-    unHighlight(){
-      
+    unHighlight(link : any){
+      link = false;
+      console.log(link);
     }
 
 }

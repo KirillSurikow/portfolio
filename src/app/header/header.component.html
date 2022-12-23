@@ -2,16 +2,20 @@
     Kirill
 </div>
 <div class="menu">
-    <div (mouseenter)="highlight()" (mouseleave)="unHighlight()" class="linkWrapper">
-        <div id="aboutMe" class="menuLink">About me</div>
-        <div id="underlineAM" class="underline"></div>
+
+    
+    <div (mouseenter)="highlight(aboutMeHover)" (mouseleave)="unHighlight(aboutMeHover)" class="linkWrapper">
+        <div [ngClass]="aboutMeHover ? 'hovering' : ''" class="menuLink">About me</div>
+        <div [ngClass]="aboutMeHover ? 'displaying' : ''" class="underline"></div>
     </div>
-    <div (mouseenter)="highlight()" (mouseleave)="unHighlight()" class="linkWrapper">
-        <div id="skills" class="menuLink">Skills</div>
-        <div id="underlineS" class="underline"></div>
+   
+   
+    <div (mouseenter)="highlight(skillsHover)" (mouseleave)="unHighlight(skillsHover)" class="linkWrapper">
+        <div [ngClass]="skillsHover ? 'hovering' : ''" class="menuLink">Skills</div>
+        <div [ngClass]="skillsHover ? 'displaying' : ''" class="underline"></div>
     </div>
-    <div (mouseenter)="highlight()" (mouseleave)="unHighlight()" class="linkWrapper">
-        <div id="portfolio" class="menuLink">Portfolio</div>
-        <div id="underlineP" class="underline"></div>
+    <div (mouseenter)="highlight(portfolioHover)" (mouseleave)="unHighlight(portfolioHover)" class="linkWrapper">
+        <div [ngClass]="portfolioHover ? 'hovering' : ''" class="menuLink">Portfolio</div>
+        <div [ngClass]="portfolioHover ? 'displaying' : ''" class="underline"></div>
     </div>
 </div>
