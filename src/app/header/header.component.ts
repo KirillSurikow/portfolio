@@ -6,12 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-   public hoveringAboutMe : boolean = false;
-   public hoveringSkills : boolean = false;
-   public hoveringPortfolio : boolean = false;
-
     highlight(){
-      console.log('works')
+      console.log()
     }
 
     unHighlight(){

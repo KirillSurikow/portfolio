@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SocialMediaBlockComponent } from './social-media-block/social-media-block.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SocialMediaBlockComponent } from './social-media-block/social-media-blo
     FrontPageComponent,
     HeaderComponent,
     IntroductionComponent,
-    SocialMediaBlockComponent
+    SocialMediaBlockComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,

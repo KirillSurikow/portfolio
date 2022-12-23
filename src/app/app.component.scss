@@ -14,3 +14,18 @@
         width: 100%;
     }
 }
+
+.wholeScreen{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+app-front-page{
+    width: 85vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}

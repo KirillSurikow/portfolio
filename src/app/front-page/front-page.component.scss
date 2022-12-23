@@ -3,20 +3,17 @@
     align-items: center;
     justify-content: space-between;
     height: 110px;
+    width: 100%;
 }
 
 .introduction {
     display: flex;
-    position: absolute;
-    left: 50%;
-    top: 25%;
+    align-self: flex-end;
 }
 
 .smTop {
-    position: absolute;
-    top: 630px;
-    left: 0px;
     display: flex;
     align-items: center;
-    margin-top: 80px;
+    justify-content: space-between;
+    width: 100%;
 }

@@ -17,3 +17,17 @@
     font-size: 23px;
     font-weight: 400;
 }
+
+.leftBlock{
+    display: flex;
+    align-items: center;
+    transform: translateX(-7.5vw);
+}
+
+.rightBlock{
+    color: white;
+    writing-mode: tb-rl;
+    transform: translateY(-7vh);
+    font-size: 23px;
+    font-weight: 400;
+}
