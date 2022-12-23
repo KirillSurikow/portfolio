@@ -10,14 +10,22 @@ export class HeaderComponent {
   skillsHover : boolean = false;
   portfolioHover : boolean = false;
 
-    highlight(link : any){
-       link = true;
-       console.log(link);
+    highlight(link : string){
+       if(link == 'aboutMeHover')
+       this.aboutMeHover = true;
+       if(link == 'skillsHover')
+       this.skillsHover = true;
+       if(link == 'portfolioHover')
+       this.portfolioHover = true;
     }
 
-    unHighlight(link : any){
-      link = false;
-      console.log(link);
+    unHighlight(link : string){
+      if(link == 'aboutMeHover')
+       this.aboutMeHover = false;
+       if(link == 'skillsHover')
+       this.skillsHover = false;
+       if(link == 'portfolioHover')
+       this.portfolioHover = false;
     }
 
 }
