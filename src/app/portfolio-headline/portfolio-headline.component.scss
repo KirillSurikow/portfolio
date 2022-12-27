@@ -1,0 +1,48 @@
+.headlineContainer {
+     display: flex;
+     width: 100%;
+     align-items: center;
+
+    .blueLineSContainer {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 10px;
+
+        .blueLineS {
+            height: 2px;
+            width: 100px;
+            background-color: #4B47FF;
+        }
+    }
+
+    h1 {
+        color: wheat;
+        font-size: 90px;
+        font-weight: 700;
+
+    }
+
+    .blueLineLContainer {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        padding-left: 10px;
+
+        .blueLineL {
+            height: 2px;
+            width: 100%;
+            background-color: #4B47FF;
+        }
+    }
+}
+
+
+.subHeadline {
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+}

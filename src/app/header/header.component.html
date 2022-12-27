@@ -2,14 +2,10 @@
     Kirill
 </div>
 <div class="menu">
-
-    
     <div (mouseenter)="highlight('aboutMeHover')" (mouseleave)="unHighlight('aboutMeHover')" class="linkWrapper">
         <div [ngClass]="aboutMeHover ? 'hovering' : ''" class="menuLink">About me</div>
         <div [ngClass]="aboutMeHover ? 'displaying' : ''" class="underline"></div>
     </div>
-   
-   
     <div (mouseenter)="highlight('skillsHover')" (mouseleave)="unHighlight('skillsHover')" class="linkWrapper">
         <div [ngClass]="skillsHover ? 'hovering' : ''" class="menuLink">Skills</div>
         <div [ngClass]="skillsHover ? 'displaying' : ''" class="underline"></div>

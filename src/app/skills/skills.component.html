@@ -1,0 +1,22 @@
+<div class="allSkills">
+    <div *ngFor="let skill of allSkills; let i = index" class="skill">
+        <img class="skillImg" src="./../../assets/img/skills/{{ skill.img }}" alt="">
+        <div class="skillName">
+             {{ skill.name }}
+        </div>
+    </div>
+</div>
+<div class="skillDescription">
+    <div class="headlineBox">
+        <h1>My skills</h1>
+        <div class="blueLine"></div>
+    </div>
+    <div class="skillText">
+       I have grown my frontend development skills that have allowed me to create different projects.
+    </div>
+    <div class="callTABtn">
+        Get in touch
+    </div>
+
+</div>
+<img class="shadow" src="./../../assets/img/photoShadows/shadowSkills.png">

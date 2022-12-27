@@ -1,0 +1,62 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 100%;
+    position: relative;
+    padding-left: 7.5vw;
+    .leftBlock {
+       width: 50%;
+       word-break: break-all;
+
+        h1 {
+            font-size: 90px;
+            font-weight: 700;
+        } 
+        .largeText {
+            margin-top: 50px;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .smallTextContainer {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .smallText {
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.rightBlock {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+    .smallPortraet {
+       width: 350px;
+       height: 350px;
+       object-fit: cover;
+       border-radius: 100%;
+       border: 2px solid #00BEE8;
+    }
+
+    .shadowSmallPortraet {
+        position: absolute;
+        right: 0;
+    }
+
+    .blueLine {
+       margin-left: 0;
+       margin-right: 0;
+       width: 100%;
+       height: 1px;
+       background-color: #00BEE8;
+    }
+}

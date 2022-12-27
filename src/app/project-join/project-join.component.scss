@@ -1,0 +1,56 @@
+.projectContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 35px;
+
+    .imgContainer {
+        width: 55%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 15%;
+        width: 45%;
+        gap: 10px;
+        height: 100%;
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #4B47FF;
+        }
+
+
+        .skills {
+            font-size: 23px;
+            font-weight: 400;
+            color: #00BEE8;
+        }
+
+        .descriptionText {
+            font-size: 16px;
+            font-family: 400;
+            color: white;
+        }
+
+
+        .buttons {
+            display: flex;
+            justify-content: flex-start;
+            gap: 5%;
+
+        }
+    }
+}

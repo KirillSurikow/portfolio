@@ -1,0 +1,66 @@
+.allSkills {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 170px;
+        height: 130px;
+
+        .skillName {
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+}
+
+.skillDescription{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+
+    .headlineBox{
+        margin-bottom: 55px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        h1 {
+            font-size: 90px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: end;
+        } 
+
+        .blueLine{
+            position: absolute;
+            width: 6.5vw;
+            height: 2px;
+            background-color: #4B47FF;
+            right: -7.5vw;
+            
+        }
+    }
+
+    .skillText{
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: end;
+    }
+}
+
+.shadow{
+    position: absolute;
+    left: -7.5vw;
+    bottom: -475px;
+}
