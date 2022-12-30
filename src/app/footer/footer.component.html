@@ -1,0 +1,18 @@
+<div class="logo">
+    <img class="logo" src="./../../assets/img/navigation/logoCut.png">
+    <div (mouseenter)="highlight()" (mouseleave)="unHighlight()"  class="impressum">
+        <div class="characters">Impressum</div>
+        <div [ngClass]="legalNotiveHover? 'displaying' : ''" class="underline"></div>
+    </div>
+</div>
+<div class="copyright">
+    <img src="./../../assets/img/navigation/copyright.png">
+        Kirill Surikow 2022
+</div>
+<div class="smIcons">
+    <img *ngFor="let icon of smIcons" src="./../../assets/img/socialMedia/{{ icon }}">
+</div>
+<div (mouseenter)="highlight()" (mouseleave)="unHighlight()"  class="impressumResponsive">
+    <div class="characters">Impressum</div>
+    <div [ngClass]="legalNotiveHover? 'displaying' : ''" class="underline"></div>
+</div>

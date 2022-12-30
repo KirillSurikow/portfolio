@@ -1,29 +1,37 @@
-<div class="contactText">
-    <h3>Got a problem to solve?</h3>
-    <p>Contact me throught this form, i am interested in hearing you,
-        knowing your ideas and contributing to your projects with my work.
-        <br>
-        <br>
-        Need a Frontend Develover? <strong>Contact me!</strong>
-    </p>
+<div class="content">
+    <div class="contactText">
+        <div class="headlineBox">
+            <div class="blueLine"></div>
+            <h3>Got a problem to solve?</h3>
+        </div>
+        <p>Contact me throught this form, i am interested in hearing you,
+            knowing your ideas and contributing to your projects with my work.
+            <br>
+            <br>
+            Need a Frontend Developer? <strong>Contact me!</strong>
+        </p>
+    </div>
+    <form class="formular" novalidate>
+        <div>
+            <input (input)="typing($event, 'name')" type="text" required placeholder="Your name"
+                pattern="[a-zA-Z0-9]{2,25}" minlength="2" maxlength="20">
+            <span *ngIf="invalidName" class="error" aria-live="polite">do not type "<" or ">" </span>
+        </div>
+        <div>
+            <input (input)="typing($event, 'mail')" type="email" required placeholder="Your email"
+                pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}" minlength="6" maxlength="30">
+            <span *ngIf="invalidEmail" class="error" aria-live="polite">do not type "<" or ">" </span>
+        </div>
+        <div>
+            <textarea (input)="typing($event, 'message')" required placeholder="Your message" name="" cols="30"
+                rows="10" pattern="[a-zA-Z0-9!@#$%^*_|]{6,300}" minlength="2" maxlength="300"></textarea>
+            <span *ngIf="invalidMessage" class="error" aria-live="polite">do not type "<" or ">" </span>
+        </div>
+        <button class="sendBtn">Send message :)</button>
+    </form>
 </div>
-<form class="formular" novalidate>
-    <div>
-        <input type="text" required placeholder="Your name" pattern="[a-zA-Z0-9]{2,25}" minlength="2" maxlength="20">
-        <span class="error" aria-live="polite"></span>
-    </div>
-    <div>
-        <input type="email" required placeholder="Your email" pattern="[a-zA-Z0-9!@#$%^*_|]{6,25}" minlength="6"
-            maxlength="30">
-        
-    </div>
-    <div>
-        <textarea required placeholder="Your message" name="" cols="30" rows="10" pattern="[a-zA-Z0-9!@#$%^*_|]{6,300}"
-            minlength="2" maxlength="300"></textarea>
-    </div>
 
-
-
-
-    <button class="sendBtn">Send message :)</button>
-</form>
+<img class="shadow" src="./../../assets/img/photoShadows/shadowContact.png">
+<span class="material-symbols-outlined">
+    arrow_circle_up
+</span>

@@ -1,4 +1,4 @@
-.shadow1{
+.shadow1 {
     position: absolute;
     left: -7.5vw;
     z-index: -1;
@@ -60,5 +60,123 @@
             gap: 5%;
         }
 
+    }
+}
+
+//switching to a column layout
+
+@media(max-width:1010px) {
+    .projectContainer {
+        flex-direction: column;
+    }
+
+    .imgContainer {
+        justify-content: center !important;
+    }
+
+    .description {
+        padding-left: 0 !important;
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .skills {
+        width: 100%;
+        text-align: center;
+    }
+
+    .descriptionText {
+        width: 100%;
+        text-align: center;
+    }
+
+    .buttons {
+        width: 100%;
+        justify-content: center !important;
+    }
+}
+
+///switching to a column layout end
+
+/// adjusting the image size
+
+
+@media(max-width:780px) {
+
+    .imgContainer,
+    .projectImg {
+        height: 90% !important;
+    }
+}
+
+@media(max-width:430px) {
+
+    .imgContainer,
+    .projectImg {
+        height: 70% !important;
+    }
+}
+
+/// adjusting the image size end
+
+/// adjusting the description text
+
+@media(max-width:890px) {
+    .description {
+        width: 62% !important;
+    }
+}
+
+@media(max-width:645px) {
+    .description {
+        width: 85% !important;
+    }
+}
+
+@media(max-width:470px) {
+    .description {
+        width: 100% !important;
+    }
+}
+
+
+///adjusting the shadow
+
+@media(max-width:1010px) {
+    .shadow1 {
+        top: 1419px !important;
+        width: auto !important;
+        height: 638px !important;
+        left: 26.5vw !important;
+    }
+}
+
+@media(max-width:780px) {
+    .shadow1 {
+        top: 1434px !important;
+        width: auto !important;
+        height: 584px !important;
+        left: 26.5vw !important;
+    }
+}
+
+@media(max-width:730px) {
+    .shadow1 {
+        top: 1439px !important;
+        width: auto !important;
+        height: 571px !important;
+        left: 26.5vw !important;
+    }
+}
+
+@media(max-width:430px) {
+    .shadow1 {
+        top: 1491px !important;
+        width: auto !important;
+        height: 418px !important;
+        left: 26.5vw !important;
     }
 }

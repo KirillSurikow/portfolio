@@ -3,17 +3,64 @@
     align-items: center;
     justify-content: space-between;
     height: 110px;
-    width: 100%;
+    width: 85vw;
 }
 
 .introduction {
     display: flex;
-    align-self: flex-end;
+    width: 85vw;
 }
 
 .smTop {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    margin-bottom: 10px;
     justify-content: space-between;
     width: 100%;
+}
+
+.smTopResponsive{
+    align-items: flex-end;
+}
+
+.responsiveBlock{
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+
+    app-social-media-block{
+        align-self: flex-start;
+        justify-content: space-between;
+        width: 92.5vw;
+    }
+}
+
+
+
+
+@media(max-width:880px){
+    .introduction{
+        display: none;
+    }
+
+    .smTop{
+        display: none;
+    }
+
+    .smTopResponsive{
+        display: flex;
+    }
+
+    .responsiveBlock{
+        display: flex;
+    }
+}
+
+@media (max-width:700px){
+    .responsiveBlock{
+        gap: 40px;
+    }
 }

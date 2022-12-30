@@ -46,3 +46,41 @@
     font-weight: 400;
     margin-top: 20px;
 }
+
+//adjusting the small blue line
+
+@media(max-width:600px){
+    .blueLineS{
+        width: 40px !important;
+    }
+}
+
+///adjusting th small blue line end
+
+///adjusting the headline
+
+@media(max-width:1200px) {
+    h1 {
+        font-size: 80px !important;
+    }
+}
+
+@media(max-width:1065px) {
+    h1 {
+        font-size: 70px !important;
+    }
+}
+
+@media(max-width:930px) {
+    h1 {
+        font-size: 65px !important;
+    }
+}
+
+@media(max-width:390px) {
+    h1 {
+        font-size: 50px !important;
+    }
+}
+
+///adjusting the headline end

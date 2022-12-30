@@ -10,6 +10,26 @@
         width: 170px;
         height: 130px;
 
+        .skillImg {
+            &:hover {
+                animation: bounce 250ms ease-in-out infinite;
+            }
+
+            @keyframes bounce {
+                0% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(-20px);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+        }
+
         .skillName {
             color: white;
             font-size: 16px;
@@ -20,14 +40,14 @@
     }
 }
 
-.skillDescription{
+.skillDescription {
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 35%;
 
-    .headlineBox{
+    .headlineBox {
         margin-bottom: 55px;
         display: flex;
         align-items: center;
@@ -39,19 +59,19 @@
             margin-bottom: 20px;
             width: 100%;
             text-align: end;
-        } 
+        }
 
-        .blueLine{
+        .blueLine {
             position: absolute;
             width: 6.5vw;
             height: 2px;
             background-color: #4B47FF;
             right: -7.5vw;
-            
+
         }
     }
 
-    .skillText{
+    .skillText {
         width: 100%;
         font-size: 16px;
         font-weight: 400;
@@ -59,8 +79,193 @@
     }
 }
 
-.shadow{
+.shadow {
     position: absolute;
     left: -7.5vw;
     bottom: -475px;
 }
+
+.callTABtnResponsive {
+    background-color: #00BEE8;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 165px;
+    height: 58px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 400;
+    margin-top: 30px;
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+    color: white;
+    border: none;
+
+    &:hover {
+        background-color: #4B47FF;
+        transform: scale(1.1);
+    }
+}
+
+///adjusting the headline
+
+@media(max-width:1200px) {
+    h1 {
+        font-size: 80px !important;
+    }
+}
+
+@media(max-width:1065px) {
+    h1 {
+        font-size: 70px !important;
+    }
+}
+
+@media(max-width:930px) {
+    h1 {
+        font-size: 65px !important;
+    }
+}
+
+@media(max-width:390px) {
+    h1 {
+        font-size: 50px !important;
+    }
+}
+
+///adjusting the headline end
+
+///switching to a column layout
+
+@media(max-width:925px) {
+    .callTABtn {
+        display: none;
+    }
+
+    .skillDescription {
+        margin-bottom: 30px;
+        width: 50%;
+    }
+
+    .allSkills {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .blueLine {
+        display: none;
+    }
+
+    .callTABtnResponsive {
+        display: flex !important;
+    }
+
+
+
+    .headlineBox {
+        margin-bottom: 25px !important;
+    }
+}
+
+///switching to columnLayout end
+
+///adjusting the sizes of the skill images
+
+@media(max-width:630px) {
+    .skillDescription {
+        width: 80%;
+    }
+
+    .skill {
+        width: 150px !important;
+    }
+}
+
+@media(max-width:600px) {
+    .skill {
+        width: 130px !important;
+    }
+}
+
+@media(max-width:460px) {
+    .skill {
+        width: 110px !important;
+    }
+}
+
+@media(max-width:390px) {
+    .skill {
+        width: 90px !important;
+    }
+}
+
+@media(max-width:320px) {
+    .skill {
+        width: 80px !important;
+    }
+}
+
+///aligning the headline to flex-end
+
+@media(max-width:360px) {
+    .skillDescription {
+        align-self: flex-end;
+        padding-right: 10px;
+    }
+
+    .blueLine {
+        display: flex;
+    }
+
+    .allSkills {
+        justify-content: flex-end !important;
+    }
+}
+
+/// aligning the headline to flex-end (end)
+
+///adjusting the shadow
+
+@media(max-width:1100px) {
+    .shadow {
+        width: auto;
+        height: 576px;
+        bottom: -293px;
+    }
+}
+
+@media(max-width:500px) {
+    .shadow {
+        width: auto;
+        height: 542px;
+        bottom: -267px;
+    }
+}
+
+@media(max-width:440px) {
+    .shadow {
+        bottom: -231px;
+    }
+}
+
+@media(max-width:380px) {
+    .shadow {
+        height: 483px;
+    }
+}
+
+@media(max-width:350px) {
+    .shadow {
+        height: 436px;
+        bottom: -210px;
+    }
+}
+
+@media(max-width:330px) {
+    .shadow {
+        height: 400px;
+    }
+}
+
+///adjusting shadow end

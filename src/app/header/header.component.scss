@@ -1,6 +1,6 @@
-.name {
-    color: white;
-    font-size: 27px;
+.logo {
+    height: 100px;
+    width: auto;
 }
 
 .menu {
@@ -33,5 +33,19 @@
 
     .displaying{
         opacity: 1 !important;
+    }
+}
+
+.burgerMenu{
+    display: none;
+}
+
+@media (max-width:880px){
+    .menu{
+        display: none;
+    }
+
+    .burgerMenu{
+        display: flex !important;
     }
 }

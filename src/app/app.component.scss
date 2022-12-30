@@ -10,10 +10,18 @@
     left: 0px;
     z-index: -1;
 
-    img {
+    .normalImg {
         width: 100%;
     }
+
+    .responsiveImg {
+        width: 100%;
+        height: auto;
+        display: none;
+    }
 }
+
+
 
 .wholeScreen {
     width: 100%;
@@ -24,12 +32,12 @@
 
 
 app-front-page {
-    width: 85vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 }
 
 app-about-me {
@@ -37,8 +45,6 @@ app-about-me {
     height: 100vh;
     display: flex;
 }
-
-
 
 app-skills {
     width: 85vw;
@@ -49,7 +55,7 @@ app-skills {
     position: relative;
 }
 
-app-portfolio-headline{
+app-portfolio-headline {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -57,7 +63,7 @@ app-portfolio-headline{
     align-items: center;
 }
 
-app-portfolio{
+app-portfolio {
     width: 85vw;
     margin-top: 30px;
     gap: 60px;
@@ -68,7 +74,7 @@ app-portfolio{
     position: relative;
 }
 
-app-contact-headline{
+app-contact-headline {
     margin-top: 200px;
     width: 100%;
     display: flex;
@@ -77,13 +83,124 @@ app-contact-headline{
     gap: 1vw;
 }
 
-app-contact{
-    width: 85vw;
-    margin-top: 140px;
+app-contact {
+    width: 100%;
+    margin-top: 100px;
+    height: 92vh;
     gap: 60px;
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
+    justify-content: center;
     position: relative;
+    overflow-y: hidden;
 }
 
+app-footer {
+    width: 100%;
+    height: 30vh;
+    border-top: 3px solid #00BEE8;
+    background-color: #141D2F;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+app-responsive-menu{
+    width: 100% !important;
+    height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+}
+
+//////////////////making the large portraet responsive start
+
+@media (max-width:930px) {
+    .curveBox {
+        overflow: hidden;
+
+        .normalImg {
+            height: 70vh;
+            width: auto;
+        }
+    }
+}
+
+@media (max-width:470px) {
+    .normalImg {
+        display: none;
+    }
+
+    .responsiveImg {
+        display: flex !important;
+        margin-top: -100px;
+    }
+}
+
+@media (max-width:420px) {
+    .responsiveImg {
+        margin-top: -90px;
+    }
+}
+
+@media (max-width:375px) {
+    .responsiveImg {
+        margin-top: -75px;
+    }
+}
+
+@media (max-width:345px) {
+    .responsiveImg {
+        margin-top: -60px;
+    }
+}
+
+@media (max-width:320px) {
+    .responsiveImg {
+        margin-top: -40px;
+    }
+}
+
+//////making the large portraet responsive end
+
+
+///adjusting skills layout
+
+@media(max-width:925px) {
+    app-skills {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 30px;
+        height: 120vh;
+    }
+}
+
+////adjusting skills layout end
+
+///reducing margin of contact headline
+
+@media (max-width:1010px) {
+    app-contact-headline {
+        margin-top: 0;
+    }
+}
+
+///reducing margin of contact headline end
+
+///adjusting the height of app-contact
+
+@media(max-width:550px) {
+    app-contact {
+        height: 100vh;
+    }
+}
+
+///adjusting the height of app-contact end
+
+///switching footer to column layout
+
+
+@media (max-width: 660px) {
+    app-footer {
+        flex-direction: column;
+    }
+}

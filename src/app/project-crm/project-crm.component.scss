@@ -12,7 +12,7 @@
         justify-content: flex-end;
 
 
-        img {
+        .projectImg {
             height: 100%;
         }
     }
@@ -55,8 +55,108 @@
     }
 }
 
-.shadow2{
+.shadow2 {
     position: absolute;
     right: -7.5vw;
     bottom: -310px;
+}
+
+//switching to a column layout
+
+@media(max-width:1010px) {
+    .projectContainer {
+        flex-direction: column;
+    }
+
+    .imgContainer {
+        justify-content: center !important;
+    }
+
+    .description {
+        padding-left: 0 !important;
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .skills {
+        width: 100%;
+        text-align: center;
+    }
+
+    .descriptionText {
+        width: 100%;
+        text-align: center;
+    }
+
+    .buttons {
+        width: 100%;
+        justify-content: center !important;
+    }
+}
+
+///switching to a column layout end
+
+/// adjusting the image size
+
+
+@media(max-width:780px) {
+
+    .imgContainer,
+    .projectImg {
+        height: 90% !important;
+    }
+}
+
+@media(max-width:430px) {
+
+    .imgContainer,
+    .projectImg {
+        height: 70% !important;
+    }
+}
+
+/// adjusting the image size end
+
+/// adjusting the description text
+
+@media(max-width:890px) {
+    .description {
+        width: 62% !important;
+    }
+}
+
+@media(max-width:645px) {
+    .description {
+        width: 85% !important;
+    }
+}
+
+@media(max-width:470px) {
+    .description {
+        width: 100% !important;
+    }
+}
+
+/// adjusting the description text end
+
+
+///adjusting the shadow
+
+
+@media(max-width:520px) {
+    .shadow2 {
+        width: auto;
+        height: 803px;
+    }
+}
+
+
+@media(max-width:440px) {
+    .shadow2 {
+        width: auto;
+        height: 720px;
+    }
 }

@@ -1,6 +1,4 @@
-<div class="name">
-    Kirill
-</div>
+<img class="logo" src="./../../assets/img/navigation/logoCut.png">
 <div class="menu">
     <div (mouseenter)="highlight('aboutMeHover')" (mouseleave)="unHighlight('aboutMeHover')" class="linkWrapper">
         <div [ngClass]="aboutMeHover ? 'hovering' : ''" class="menuLink">About me</div>
@@ -15,3 +13,4 @@
         <div [ngClass]="portfolioHover ? 'displaying' : ''" class="underline"></div>
     </div>
 </div>
+<img class="burgerMenu" (click)="openRMenu()" src="./../../assets/img/navigation/burgerMenu.png">

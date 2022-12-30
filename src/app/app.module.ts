@@ -20,6 +20,9 @@ import { ProjectPokedexComponent } from './project-pokedex/project-pokedex.compo
 import { ProjectCrmComponent } from './project-crm/project-crm.component';
 import { ContactHeadlineComponent } from './contact-headline/contact-headline.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ResponsiveMenuComponent } from './responsive-menu/responsive-menu.component';
 
 
 
@@ -40,12 +43,17 @@ import { ContactComponent } from './contact/contact.component';
     ProjectPokedexComponent,
     ProjectCrmComponent,
     ContactHeadlineComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent,
+    ResponsiveMenuComponent,
+   
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { ResponsiveMenuComponent } from '../responsive-menu/responsive-menu.component';
+import { MatDialog } from '@angular/material/dialog';
+
+
 
 @Component({
   selector: 'app-header',
@@ -10,28 +14,31 @@ export class HeaderComponent {
   skillsHover: boolean = false;
   portfolioHover: boolean = false;
 
+ constructor(public dialog: MatDialog){
+
+ }
+
   highlight(link: string) {
     if (link == 'aboutMeHover')
       this.aboutMeHover = true;
-      console.log(this.aboutMeHover);
     if (link == 'skillsHover')
       this.skillsHover = true;
-      console.log(this.skillsHover);
     if (link == 'portfolioHover')
-      this.portfolioHover = true;
-      console.log();
+      this.portfolioHover = true; 
   }
 
   unHighlight(link: string) {
     if (link == 'aboutMeHover')
       this.aboutMeHover = false;
-      console.log(this.aboutMeHover);
     if (link == 'skillsHover')
       this.skillsHover = false;
-      console.log(this.skillsHover);
     if (link == 'portfolioHover')
       this.portfolioHover = false;
-      console.log(this.portfolioHover);
+  }
+
+
+  openRMenu():void{
+    const responsiveMenu = this.dialog.open(ResponsiveMenuComponent);
   }
 
 }
