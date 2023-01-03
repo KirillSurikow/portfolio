@@ -1,18 +1,20 @@
 <div class="logo">
-    <img class="logo" src="./../../assets/img/navigation/logoCut.png">
-    <div (mouseenter)="highlight()" (mouseleave)="unHighlight()"  class="impressum">
-        <div class="characters">Impressum</div>
+    <img class="logo" src="assets/img/navigation/logoCut.png">
+    <div (mouseenter)="highlight()" (mouseleave)="unHighlight()" class="impressum">
+        <div class="characters" translate>Imprint</div>
         <div [ngClass]="legalNotiveHover? 'displaying' : ''" class="underline"></div>
     </div>
 </div>
 <div class="copyright">
-    <img src="./../../assets/img/navigation/copyright.png">
-        Kirill Surikow 2022
+    <img src="assets/img/navigation/copyright.png">
+    Kirill Surikow 2022
 </div>
 <div class="smIcons">
-    <img *ngFor="let icon of smIcons" src="./../../assets/img/socialMedia/{{ icon }}">
+    <a *ngFor="let icon of smIcons" href="{{ icon.url }}">
+        <img src="assets/img/socialMedia/{{ icon.path }}">
+    </a>
 </div>
-<div (mouseenter)="highlight()" (mouseleave)="unHighlight()"  class="impressumResponsive">
-    <div class="characters">Impressum</div>
+<div (mouseenter)="highlight()" (mouseleave)="unHighlight()" class="impressumResponsive">
+    <div class="characters" translate>Imprint</div>
     <div [ngClass]="legalNotiveHover? 'displaying' : ''" class="underline"></div>
 </div>

@@ -3,13 +3,15 @@
 
     </div>
     <div class="smIcons">
-        <img *ngFor="let icon of smIcons" src="./../../assets/img/socialMedia/{{ icon }}">
+        <a *ngFor="let icon of smIcons" href="{{ icon.url }}">
+            <img src="./../../assets/img/socialMedia/{{ icon.path }}">
+        </a>
     </div>
     <div class="email">
         K.Surikow94@gmx.de
     </div>
 </div>
-<div class="rightBlock">
+<div translate class="rightBlock">
     scroll down
-   <img src="./../../assets/img/navigation/arrowDown.png">
+    <img src="./../../assets/img/navigation/arrowDown.png">
 </div>

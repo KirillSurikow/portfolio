@@ -1,9 +1,15 @@
-<div class="header">
-    <img class="logo" src="./../../assets/img/navigation/logoCut.png">
-    <img class="closeMenu" src="./../../assets/img/navigation/closeMenu.png">
-</div>
-<div class="nav">
-    <span>About me</span>
-    <span>Portfolio</span>
-    <span>Contact</span>
+
+<div class="wrapper">
+    <div class="header">
+        <div class="innerHeader">
+            <img class="logo" src="assets/img/navigation/logoCut.png">
+            <img (click)="closeRMenu()" class="closeMenu" [src]="menuImg">
+        </div>
+    </div>
+    <div class="nav">
+        <a (click)="closeRMenu()" routerLink="" fragment="aboutMe" translate>About me</a>
+        <a (click)="closeRMenu()" routerLink="" fragment="skills" translate>My Skills</a>
+        <a (click)="closeRMenu()" routerLink="" fragment="portfolio" translate >Portfolio</a>
+        <a (click)="closeRMenu()" routerLink="" fragment="contact" translate>Contact</a>
+    </div>
 </div>

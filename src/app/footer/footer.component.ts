@@ -7,9 +7,17 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
   smIcons = [
-    'github.png',
-    'mail.png',
-    'linkedIn.png'
+    {
+      path: 'github.png',
+      url: 'https://github.com/KirillSurikow'
+    },
+    {
+      path: 'mail.png',
+      url: '#'
+    }, {
+      path: 'linkedIn.png',
+      url: 'https://www.linkedin.com/in/kirill-surikow-162282260/'
+    },
   ]
 
   legalNotiveHover: boolean = false;

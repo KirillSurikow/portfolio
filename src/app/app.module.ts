@@ -23,6 +23,15 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ResponsiveMenuComponent } from './responsive-menu/responsive-menu.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 
 
@@ -46,6 +55,8 @@ import { ResponsiveMenuComponent } from './responsive-menu/responsive-menu.compo
     ContactComponent,
     FooterComponent,
     ResponsiveMenuComponent,
+    
+   
    
   
   ],
@@ -53,7 +64,20 @@ import { ResponsiveMenuComponent } from './responsive-menu/responsive-menu.compo
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    TranslateModule.forRoot(
+      {
+        defaultLanguage: 'en',
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
+    }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

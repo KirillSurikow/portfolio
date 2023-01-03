@@ -1,16 +1,35 @@
-<img class="logo" src="./../../assets/img/navigation/logoCut.png">
-<div class="menu">
-    <div (mouseenter)="highlight('aboutMeHover')" (mouseleave)="unHighlight('aboutMeHover')" class="linkWrapper">
-        <div [ngClass]="aboutMeHover ? 'hovering' : ''" class="menuLink">About me</div>
-        <div [ngClass]="aboutMeHover ? 'displaying' : ''" class="underline"></div>
+<div class="innerHeader">
+    <a routerLink="" fragment="frontPage"><img class="logo" src="assets/img/navigation/logoCut.png"></a>
+    <div class="menu">
+        <a routerLink="" fragment="aboutMe" (mouseenter)="highlight('aboutMeHover')"
+            (mouseleave)="unHighlight('aboutMeHover')" class="linkWrapper">
+            <div [ngClass]="aboutMeHover ? 'hovering' : ''" class="menuLink" translate>About me</div>
+            <div [ngClass]="aboutMeHover ? 'displaying' : ''" class="underline"></div>
+        </a>
+        <a routerLink="" fragment="skills" (mouseenter)="highlight('skillsHover')"
+            (mouseleave)="unHighlight('skillsHover')" class="linkWrapper">
+            <div [ngClass]="skillsHover ? 'hovering' : ''" class="menuLink" translate>Skills</div>
+            <div [ngClass]="skillsHover ? 'displaying' : ''" class="underline"></div>
+        </a>
+        <a routerLink="" fragment="portfolio" (mouseenter)="highlight('portfolioHover')"
+            (mouseleave)="unHighlight('portfolioHover')" class="linkWrapper">
+            <div [ngClass]="portfolioHover ? 'hovering' : ''" class="menuLink" translate>Portfolio</div>
+            <div [ngClass]="portfolioHover ? 'displaying' : ''" class="underline"></div>
+        </a>
+        <div class="translation">
+            <span (click)="translate.use('de')">
+                DE
+            </span>
+            <span>
+                |
+            </span>
+            <span (click)="translate.use('en')">
+                EN
+            </span>
+        </div>
     </div>
-    <div (mouseenter)="highlight('skillsHover')" (mouseleave)="unHighlight('skillsHover')" class="linkWrapper">
-        <div [ngClass]="skillsHover ? 'hovering' : ''" class="menuLink">Skills</div>
-        <div [ngClass]="skillsHover ? 'displaying' : ''" class="underline"></div>
-    </div>
-    <div (mouseenter)="highlight('portfolioHover')" (mouseleave)="unHighlight('portfolioHover')" class="linkWrapper">
-        <div [ngClass]="portfolioHover ? 'hovering' : ''" class="menuLink">Portfolio</div>
-        <div [ngClass]="portfolioHover ? 'displaying' : ''" class="underline"></div>
-    </div>
+    <img id="menuImg" [ngClass]="{'clicked' : burgerMenuActive}" class="burgerMenu" (click)="openRMenu()"
+        src="assets/img/navigation/burgerMenu.png">
 </div>
-<img class="burgerMenu" (click)="openRMenu()" src="./../../assets/img/navigation/burgerMenu.png">
+<app-responsive-menu [transitioning]="transitioning" (burgerMenuDeactivated)="deactivateRMenu()"
+    [ngClass]="{'swipeIn' : burgerMenuActive}"></app-responsive-menu>

@@ -89,7 +89,7 @@
                         background: url(./../../assets/img/formValidation/approved.png);
                         background-size: 20px;
                         background-repeat: no-repeat;
-                        background-position: 95% 12px;
+                        background-position: 95% 5px;
                         background-color: #141D2F;
                     }
 
@@ -98,7 +98,7 @@
                         background: url(./../../assets/img/formValidation/attention.png);
                         background-size: 20px;
                         background-repeat: no-repeat;
-                        background-position: 95% 12px;
+                        background-position: 95% 5px;
                         background-color: #141D2F;
                     }
 
@@ -141,7 +141,7 @@
                         background: url(./../../assets/img/formValidation/approved.png);
                         background-size: 20px;
                         background-repeat: no-repeat;
-                        background-position: 95% 12px;
+                        background-position: 95% 5px;
                         background-color: #141D2F;
                     }
 
@@ -150,7 +150,7 @@
                         background: url(./../../assets/img/formValidation/attention.png);
                         background-size: 20px;
                         background-repeat: no-repeat;
-                        background-position: 95% 12px;
+                        background-position: 95% 5px;
                         background-color: #141D2F;
                     }
                 }
@@ -182,7 +182,24 @@
                     transform: scale(1.1);
                 }
             }
+
+            .notification{
+                display: flex;
+                flex-direction: row;
+                font-size: 24px;
+                color: white;
+                gap: 5px;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                opacity: 0;
+                transition: all 250ms ease-in-out;
+            }
         }
+    }
+
+    .appear{
+        opacity : 1 !important;
     }
 
     .shadow {

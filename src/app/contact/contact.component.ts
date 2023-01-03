@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -9,28 +9,115 @@ export class ContactComponent {
   invalidName = false;
   invalidEmail = false;
   invalidMessage = false;
+  missingName = false;
+  missingMail = false;
+  missingMessage = false;
+  messageSent = false;
+
+
+  @ViewChild('myForm')
+  myform!: ElementRef;
+  @ViewChild('namefield')
+  namefield!: ElementRef;
+  @ViewChild('messagefield')
+  messagefield!: ElementRef;
+  @ViewChild('mailfield')
+  mailfield!: ElementRef;
+  @ViewChild('button')
+  button!: ElementRef;
 
   typing($event: any, slot: string) {
+    this.resetValidation()
     if (slot == 'name') {
-      if ($event.target.value.includes('<') || $event.target.value.includes('>'))
-        this.invalidName = true;
-      else
-        this.invalidName = false;
+      this.validateName($event)
     }
     if (slot == 'mail') {
-      if ($event.target.value.includes('<') || $event.target.value.includes('>'))
-        this.invalidEmail = true;
-      else
-        this.invalidEmail = false;
+      this.validateMail($event)
     }
     if (slot == 'message') {
-      if ($event.target.value.includes('<') || $event.target.value.includes('>'))
-        this.invalidMessage = true;
-      else
-        this.invalidMessage = false;
+      this.validateMessage($event)
     }
+  }
 
+  resetValidation() {
+    this.missingName = false;
+    this.missingMail = false;
+    this.missingMessage = false;
+  }
+
+  validateName($event: any) {
+    if ($event.target.value.includes('<') || $event.target.value.includes('>'))
+      this.invalidName = true;
+    else
+      this.invalidName = false;
+  }
+
+  validateMail($event: any) {
+    if ($event.target.value.includes('<') || $event.target.value.includes('>'))
+      this.invalidEmail = true;
+    else
+      this.invalidEmail = false;
+  }
+
+  validateMessage($event: any) {
+    if ($event.target.value.includes('<') || $event.target.value.includes('>'))
+      this.invalidMessage = true;
+    else
+      this.invalidMessage = false;
+  }
+
+  validateFormular() {
+    if (this.namefield.nativeElement.value == '') {
+      this.missingName = true;
+    }
+    if (this.mailfield.nativeElement.value == '') {
+      this.missingMail = true;
+    }
+    if (this.messagefield.nativeElement.value == '') {
+      this.missingMessage = true;
+    } else {
+      this.sendMail()
+    }
+  }
+
+  sendMail() {
+    this.disableFormular();
+    this.fetchFormular();
+    this.displayNotification();
+    this.enableFormular();
+  }
+
+  disableFormular() {
+    this.namefield.nativeElement.disabled = true;
+    this.messagefield.nativeElement.disabled = true;
+    this.mailfield.nativeElement.disabled = true;
+    this.button.nativeElement.disabled = true;
+  }
+
+  async fetchFormular() {
+    let fd = new FormData();
+    fd.append('name', this.namefield.nativeElement.value);
+    fd.append('message', this.namefield.nativeElement.value);
+    await fetch('https://kirill-surikow.developerakademie.net/send_mail/send_mail.php'),
+    {
+      method: 'POST',
+        body : fd
+    }
+  }
+
+  displayNotification(){
+    this.messageSent = true;
+    setTimeout(() => this.messageSent = false, 4000);
+  }
+
+  enableFormular(){
+    this.namefield.nativeElement.disabled = false;
+    this.messagefield.nativeElement.disabled = false;
+    this.mailfield.nativeElement.disabled = false;
+    this.button.nativeElement.disabled = false;
   }
 }
+
+
 
 

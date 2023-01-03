@@ -22,12 +22,21 @@
 }
 
 
-
 .wholeScreen {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.anchor1{
+    height: 135px;
+    width: 100%;
+}
+
+.anchor2{
+    height: 120px;
+    width: 100%;
 }
 
 
@@ -36,7 +45,7 @@ app-front-page {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -75,7 +84,7 @@ app-portfolio {
 }
 
 app-contact-headline {
-    margin-top: 200px;
+    margin-top: 20px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -103,13 +112,6 @@ app-footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-app-responsive-menu{
-    width: 100% !important;
-    height: 100vh !important;
-    display: flex;
-    flex-direction: column;
 }
 
 //////////////////making the large portraet responsive start

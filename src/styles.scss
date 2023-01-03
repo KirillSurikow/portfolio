@@ -27,6 +27,7 @@ body {
     cursor: pointer;
     color: white;
     border: none;
+    text-decoration: none;
 
     &:hover {
         background-color: #4B47FF;
@@ -47,6 +48,7 @@ body {
     align-items: center;
     transition: all 250ms ease-in-out;
     cursor: pointer;
+    text-decoration: none;
 
     &:hover {
         background-color: #00BEE8;
@@ -66,31 +68,37 @@ body {
     align-items: center;
     border: 1px solid #00BEE8;
     cursor: pointer;
+    text-decoration: none;
 
     &:hover {
         background-color: #00BEE8;
     }
 }
 
-
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48;
-    color: white;
-    font-size: 38px;
+.scrollUpBtn{
     position: absolute;
     bottom: 50px;
     right: 7.5vw;
-    cursor: pointer;
+    text-decoration: none;
+
+    .material-symbols-outlined {
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48;
+        color: white;
+        font-size: 38px;
+        cursor: pointer;
+    }
 
     &:hover{
         color: #00BEE8;
     }
 }
 
+
+///adjusting the menu pop up
 .mat-mdc-dialog-container .mdc-dialog__surface {
     background-color: transparent !important;
 }
@@ -107,4 +115,16 @@ body {
     width: 100% !important;
     height: 100% !important ;
     max-width: 100% !important;
+}
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+    overflow-y: hidden !important;
+}
+
+//// adjusting the menu pop up end
+/// translating the pop up
+
+.cdk-overlay-container{
+   
+    
 }

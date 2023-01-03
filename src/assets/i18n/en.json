@@ -1,0 +1,25 @@
+{
+    "Über mich": "About me",
+    "Portfolio": "Portfolio",
+    "Wie kann ich Ihnen weiterhelfen?": "Got a problem to solve?",
+    "Mit diesem Formular können Sie mich erreichen. Ich bin darauf gespannt, von Ihren Ideen zu hören und zu Ihren Projekten etwas beitragen zu können.": "Contact me throught this form, i am interested in hearing you,knowing your ideas and contributing to your projects with my work.",
+    "Suchen Sie einen Frontend Developer?": "Need a Frontend Developer?",
+    "Vermeiden Sie '<' oder '>' Zeichen": "do not type '<' or '>'",
+    "Bitte geben Sie Ihren Namen ein": "please type a name",
+    "Bitte geben Sie Ihre E-Mailaddresse ein": "please type a mail-address",
+    "Bitte geben Sie Ihre Nachricht ein": "please type a message",
+    "Senden :)" : "Send message :)",
+    "Nachricht gesendet" : "Message sent",
+    "Kontakt" : "Contact",
+    "Imressum" : "Imprint",
+    "Hier finden Sie einige meiner Projekte - testen Sie sie aus!" : "This page is a sample of my work - feel free to try them out",
+    "Ein einfaches Customer Relationship Management System basierend auf einer CRUD-Funktion." : "A very simple Customer Relationship Management System working with CRUD functionality.",
+    "Ein Task-Manager nach dem Kanban System. Erstelle und organisiere Aufgaben mithilfe von einer drag and drop Funktion. Weise den Aufgaben Kategorien und Verantwortliche zu." : "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "Basierend auf der PokeApi ist dieses Projekt eine einfache Bibliothek, die Informationen über Pokemons katalogisiert." : "Based on the PokeApi a simple library that provides and catalogues pokemon information.",
+    "Ein einfaches Jump and Run Spiel basierend auf Objektorientierung. Hilf Pepe die Münzen einzusammeln, wirf Flaschen auf die gegnerischen Hühner und bezwinge das Endboss-Huhn.": "A simple Jump-and-run game based on an object-oriented approach. Help Pepe to find coins, throw bottles on the chickens and defeat the endboss chicken." ,
+    "Eine digitale Version des beliebten Trinkspiels, welche du nun mit deinen Freunden online spielen kannst. Dieses Spiel wurde auf Basis vom angular-basierten Framework Firebase umgesetzt." : "A digital version of a popular drinking game, which you can play online with your friends. This project is realized with an angular based framework and firebase." ,
+    "Fähigkeiten": "My skills",   
+    "Ich konnte meine Fähigkeiten als Frontend Developer dahingehend entwickeln, dass ich bereits verschiedene Projekt umsetzen konnte." : "I have grown my frontend development skills that have allowed me to create different projects.",
+    "scroll runter" : "scroll down"
+    
+}
