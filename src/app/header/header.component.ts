@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  providers:[TranslateService]
 })
 export class HeaderComponent {
   aboutMeHover: boolean = false;
@@ -13,10 +15,8 @@ export class HeaderComponent {
   burgerMenuActive : boolean = false;
   transitioning : boolean = false;
 
-  constructor(public translate: TranslateService) {
-    // this language will be used as a fallback when a translation isn't found in the current language
-    translate.setDefaultLang('de');
 
+  constructor(public translate: TranslateService, private languageService: LanguageService) {
     // the lang to use, if the lang isn't available, it will use the current loader to get them
     translate.use('de');
   }
@@ -47,4 +47,17 @@ export class HeaderComponent {
     this.burgerMenuActive = false;
     this.transitioning = true;
   }
+
+  translateToDE(){
+    this.translate.use('de');
+    this.languageService.language = 'de';
+    this.languageService.changeLanguage('de')
+  }
+
+  translateToEN(){
+    this.translate.use('en');
+    this.languageService.language = 'en';
+    this.languageService.changeLanguage('en')
+  }
 }
+ 

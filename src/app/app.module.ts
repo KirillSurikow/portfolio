@@ -27,6 +27,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
+import { ImprintComponent } from './imprint/imprint.component';
+import { MainPageComponent } from './main-page/main-page.component';
+import { DataProtectionComponent } from './data-protection/data-protection.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -55,6 +58,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactComponent,
     FooterComponent,
     ResponsiveMenuComponent,
+    ImprintComponent,
+    MainPageComponent,
+    DataProtectionComponent,
     
    
    

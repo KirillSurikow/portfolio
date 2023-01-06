@@ -21,15 +21,20 @@ export class FooterComponent {
   ]
 
   legalNotiveHover: boolean = false;
+  dataProtectionHover: boolean = false;
 
 
-  highlight() {
-    console.log('works')
-    this.legalNotiveHover = true;
+  highlight(link: string) {
+    if (link == 'legalNotiveHover')
+      this.legalNotiveHover = true;
+    if (link == 'dataProtectionHover')
+      this.dataProtectionHover = true;
   }
 
-  unHighlight() {
-    console.log('works')
-    this.legalNotiveHover = false;
+  unHighlight(link: string) {
+    if (link == 'legalNotiveHover')
+      this.legalNotiveHover = false;
+    if (link == 'dataProtectionHover')
+      this.dataProtectionHover = false;
   }
 }

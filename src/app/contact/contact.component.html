@@ -4,12 +4,19 @@
             <div class="blueLine"></div>
             <h3 translate>Got a problem to solve?</h3>
         </div>
-        <p translate>Contact me throught this form, i am interested in hearing you,
-            knowing your ideas and contributing to your projects with my work.
-            <br>
-            <br>
-           Need a Frontend Developer <strong translate>Contact me!</strong>
-        </p>
+        <div class="text">
+            <p translate>
+                Contact me through this form, i am interested in hearing you, knowing your ideas and 
+                contributing to your projects with my work.
+            </p>
+            <p class="additionalText" >
+              <span translate> Need a Frontend Developer?</span>
+                <strong translate>Contact me!</strong>
+            </p>
+        </div>
+
+
+
     </div>
     <form class="formular" (submit)="validateFormular()" ngNativeValidate novalidate #myForm>
         <div>
@@ -23,7 +30,8 @@
                 pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" minlength="6"
                 maxlength="30" #mailfield>
             <span *ngIf="invalidEmail" class="error" aria-live="polite" translate>do not type '<' or '>' </span>
-                    <span *ngIf="missingMail" class="error" aria-live="polite" translate>please type a mail-address </span>
+                    <span *ngIf="missingMail" class="error" aria-live="polite" translate>please type a mail-address
+                    </span>
         </div>
         <div>
             <textarea (input)="typing($event, 'message')" required placeholder="Your message" name="message" cols="30"

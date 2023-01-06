@@ -110,27 +110,51 @@
 
 ///adjusting the headline
 
-@media(max-width:1200px) {
+@media(max-width:1530px) {
     h1 {
         font-size: 80px !important;
     }
 }
 
-@media(max-width:1065px) {
+@media(max-width:1350px) {
     h1 {
         font-size: 70px !important;
     }
 }
 
-@media(max-width:930px) {
+@media(max-width:1210px) {
     h1 {
-        font-size: 65px !important;
+        font-size: 60px !important;
+    }
+}
+
+@media(max-width:1020px) {
+    h1 {
+        font-size: 50px !important;
+    }
+}
+
+@media(max-width:925px) {
+    h1 {
+        font-size: 70px !important;
+    }
+}
+
+@media(max-width:800px) {
+    h1 {
+        font-size: 60px !important;
     }
 }
 
 @media(max-width:390px) {
     h1 {
         font-size: 50px !important;
+    }
+}
+
+@media(max-width:390px) {
+    h1 {
+        font-size: 40px !important;
     }
 }
 

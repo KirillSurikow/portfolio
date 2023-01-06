@@ -1,8 +1,12 @@
 <div class="logo">
     <img class="logo" src="assets/img/navigation/logoCut.png">
-    <div (mouseenter)="highlight()" (mouseleave)="unHighlight()" class="impressum">
-        <div class="characters" translate>Imprint</div>
+    <div (mouseenter)="highlight('legalNotiveHover')" (mouseleave)="unHighlight('legalNotiveHover')" class="impressum">
+        <a routerLink="imprint" class="characters" translate>Imprint</a>
         <div [ngClass]="legalNotiveHover? 'displaying' : ''" class="underline"></div>
+    </div>
+    <div (mouseenter)="highlight('dataProtectionHover')" (mouseleave)="unHighlight('dataProtectionHover')" class="impressum">
+        <a routerLink="data-protection" class="characters" translate>Data protection</a>
+        <div [ngClass]="dataProtectionHover? 'displaying' : ''" class="underline"></div>
     </div>
 </div>
 <div class="copyright">
@@ -14,7 +18,11 @@
         <img src="assets/img/socialMedia/{{ icon.path }}">
     </a>
 </div>
-<div (mouseenter)="highlight()" (mouseleave)="unHighlight()" class="impressumResponsive">
-    <div class="characters" translate>Imprint</div>
+<div (mouseenter)="highlight('legalNotiveHover')" (mouseleave)="unHighlight('legalNotiveHover')" class="impressumResponsive">
+    <a routerLink="imprint" class="characters" translate>Imprint</a>
     <div [ngClass]="legalNotiveHover? 'displaying' : ''" class="underline"></div>
+</div>
+<div (mouseenter)="highlight('dataProtectionHover')" (mouseleave)="unHighlight('dataProtectionHover')" class="impressumResponsive">
+    <a routerLink="data-protection" class="characters" translate>Data protection</a>
+    <div [ngClass]="dataProtectionHover? 'displaying' : ''" class="underline"></div>
 </div>

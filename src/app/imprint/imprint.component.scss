@@ -1,0 +1,27 @@
+.contentWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 85%;
+        padding-top: 30px;
+    
+        .impressum{
+            color: white;
+        }
+        
+        .headline{
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        a{
+            color: white;
+        }
+    }
+}

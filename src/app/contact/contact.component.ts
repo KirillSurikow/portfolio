@@ -1,11 +1,14 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { LanguageService } from '../services/language.service';
+
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
   invalidName = false;
   invalidEmail = false;
   invalidMessage = false;
@@ -14,6 +17,9 @@ export class ContactComponent {
   missingMessage = false;
   messageSent = false;
 
+  constructor(public language: LanguageService) {
+
+  }
 
   @ViewChild('myForm')
   myform!: ElementRef;
@@ -25,6 +31,17 @@ export class ContactComponent {
   mailfield!: ElementRef;
   @ViewChild('button')
   button!: ElementRef;
+
+  ngOnInit() {
+    this.language.languageChoosen.subscribe((lang: string) => {
+      if (lang == 'de')
+        console.log(lang)
+      if (lang == 'en')
+        console.log(lang)
+    }
+    )
+  }
+
 
   typing($event: any, slot: string) {
     this.resetValidation()
@@ -101,16 +118,16 @@ export class ContactComponent {
     await fetch('https://kirill-surikow.developerakademie.net/send_mail/send_mail.php'),
     {
       method: 'POST',
-        body : fd
+      body: fd
     }
   }
 
-  displayNotification(){
+  displayNotification() {
     this.messageSent = true;
     setTimeout(() => this.messageSent = false, 4000);
   }
 
-  enableFormular(){
+  enableFormular() {
     this.namefield.nativeElement.disabled = false;
     this.messagefield.nativeElement.disabled = false;
     this.mailfield.nativeElement.disabled = false;

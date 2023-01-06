@@ -90,10 +90,10 @@ body {
         color: white;
         font-size: 38px;
         cursor: pointer;
-    }
 
-    &:hover{
-        color: #00BEE8;
+        &:hover{
+            color: #00BEE8;
+        }
     }
 }
 
@@ -122,9 +122,12 @@ body {
 }
 
 //// adjusting the menu pop up end
-/// translating the pop up
 
-.cdk-overlay-container{
-   
-    
+
+app-main-page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
 }
