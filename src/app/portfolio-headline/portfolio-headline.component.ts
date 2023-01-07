@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio-headline',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./portfolio-headline.component.scss']
 })
 export class PortfolioHeadlineComponent {
-
+  @Input() visible: boolean = false;
 }

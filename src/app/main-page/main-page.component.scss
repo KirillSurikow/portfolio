@@ -1,35 +1,8 @@
 
 .wrapper{
     width: 100%;
-    .curveBox {
-        position: absolute;
-        width: 100%;
-        top: 0px;
-        left: 0px;
-        z-index: -1;
-    
-        .normalImg {
-            width: 100%;
-        }
-    
-        .responsiveImg {
-            width: 100%;
-            height: auto;
-            display: none;
-        }
-    }
-    
-    .anchor1{
-        height: 135px;
-        width: 100%;
-    }
-    
-    .anchor2{
-        height: 120px;
-        width: 100%;
-    }
-    
-    
+    overflow-y: auto;
+
     app-front-page {
         width: 100%;
         height: 100vh;
@@ -37,8 +10,10 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
+        transform: translateX(100vw);
+        transition: transform 250ms;
     }
-    
+
     app-about-me {
         width: 100%;
         height: 100vh;
@@ -105,58 +80,7 @@
         justify-content: space-around;
         align-items: center;
     }
-    
-    //////////////////making the large portraet responsive start
-    
-    @media (max-width:930px) {
-        .curveBox {
-            overflow: hidden;
-    
-            .normalImg {
-                height: 70vh;
-                width: auto;
-            }
-        }
-    }
-    
-    @media (max-width:470px) {
-        .normalImg {
-            display: none;
-        }
-    
-        .responsiveImg {
-            display: flex !important;
-            margin-top: -100px;
-        }
-    }
-    
-    @media (max-width:420px) {
-        .responsiveImg {
-            margin-top: -90px;
-        }
-    }
-    
-    @media (max-width:375px) {
-        .responsiveImg {
-            margin-top: -75px;
-        }
-    }
-    
-    @media (max-width:345px) {
-        .responsiveImg {
-            margin-top: -60px;
-        }
-    }
-    
-    @media (max-width:320px) {
-        .responsiveImg {
-            margin-top: -40px;
-        }
-    }
-    
-    //////making the large portraet responsive end
-    
-    
+
     ///adjusting skills layout
     
     @media(max-width:925px) {

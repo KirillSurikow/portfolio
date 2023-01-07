@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit, Input } from '@angular/core';
 import { LanguageService } from '../services/language.service';
 
 
@@ -32,12 +32,20 @@ export class ContactComponent implements OnInit {
   @ViewChild('button')
   button!: ElementRef;
 
+  @Input() visible : boolean = false;
+
   ngOnInit() {
     this.language.languageChoosen.subscribe((lang: string) => {
-      if (lang == 'de')
-        console.log(lang)
-      if (lang == 'en')
-        console.log(lang)
+      if (lang == 'de') {
+        this.namefield.nativeElement.placeholder = "Dein Name";
+        this.mailfield.nativeElement.placeholder = "Deine Email";
+        this.messagefield.nativeElement.placeholder = "Deine Nachricht";
+      }
+      if (lang == 'en') {
+        this.namefield.nativeElement.placeholder = "Your name";
+        this.mailfield.nativeElement.placeholder = "Your mail";
+        this.messagefield.nativeElement.placeholder = "Your message";
+      }
     }
     )
   }

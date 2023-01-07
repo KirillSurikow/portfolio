@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import { LanguageService } from '../services/language.service';
 
@@ -14,6 +14,8 @@ export class HeaderComponent {
   portfolioHover: boolean = false;
   burgerMenuActive : boolean = false;
   transitioning : boolean = false;
+
+  @Input() visible : boolean = false;
 
 
   constructor(public translate: TranslateService, private languageService: LanguageService) {

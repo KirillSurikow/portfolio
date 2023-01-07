@@ -30,6 +30,9 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { ImprintComponent } from './imprint/imprint.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
+import { PortraetComponent } from './portraet/portraet.component';
+import { AnchorPortfolioComponent } from './anchor-portfolio/anchor-portfolio.component';
+import { AnchorContactComponent } from './anchor-contact/anchor-contact.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -61,6 +64,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ImprintComponent,
     MainPageComponent,
     DataProtectionComponent,
+    PortraetComponent,
+    AnchorPortfolioComponent,
+    AnchorContactComponent,
     
    
    
