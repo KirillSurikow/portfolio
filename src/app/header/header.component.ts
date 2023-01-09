@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import { LanguageService } from '../services/language.service';
+
 
 @Component({
   selector: 'app-header',
@@ -15,7 +16,7 @@ export class HeaderComponent {
   burgerMenuActive : boolean = false;
   transitioning : boolean = false;
 
-  @Input() visible : boolean = false;
+
 
 
   constructor(public translate: TranslateService, private languageService: LanguageService) {
@@ -61,5 +62,6 @@ export class HeaderComponent {
     this.languageService.language = 'en';
     this.languageService.changeLanguage('en')
   }
+
 }
  

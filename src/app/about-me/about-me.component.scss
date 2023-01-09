@@ -42,33 +42,32 @@
             }
         }
     }
-}
 
-.rightBlock {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    position: relative;
-
-    .smallPortraet {
-        width: 350px;
-        height: 350px;
-        object-fit: cover;
-        border-radius: 100%;
-        border: 2px solid #00BEE8;
+    .rightBlock {
+        width: 40%;
+        display: flex;
+        align-items: center;
+    
+        .smallPortraet {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 100%;
+            border: 2px solid #00BEE8;
+        }
+    
+        .blueLine {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #00BEE8;
+        }
     }
 
     .shadowSmallPortraet {
         position: absolute;
         right: 0;
-    }
-
-    .blueLine {
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-        height: 1px;
-        background-color: #00BEE8;
     }
 }
 
@@ -118,5 +117,42 @@
         width: auto;
         height: 400px;
         bottom: -15px;
+    }
+}
+///adjusting the shadow end
+
+ ///adjusting margin-top of about-me
+
+ @media (max-width: 550px) {
+    :host {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    :host {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 390px) {
+    :host {
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 330px) {
+    :host {
+        margin-top: 200px;
+    }
+}
+
+///adjusting margin-top of about-me end
+
+///adjusting the left block's width
+
+@media (max-width:600px) {
+    .rightBlock {
+        display: none !important;
     }
 }

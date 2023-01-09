@@ -1,9 +1,8 @@
-<div [ngClass]="{'animate' : visible}" class="animationWrapper">
-    <app-header class="header"></app-header>
-    <app-introduction class="introduction"></app-introduction>
-    <app-social-media-block class="smTop"></app-social-media-block>
+
+    <app-header data-aos="slide-left" class="header"></app-header>
+    <app-introduction data-aos="slide-right" class="introduction"></app-introduction>
+    <app-social-media-block data-aos="fade" class="smTop"></app-social-media-block>
     <div class="responsiveBlock">
-        <app-introduction class="introductionResponsive"></app-introduction>
-        <app-social-media-block class="smTopResponsive"></app-social-media-block>
+        <app-introduction data-aos="slide-right" class="introductionResponsive"></app-introduction>
+        <app-social-media-block data-aos="fade" class="smTopResponsive"></app-social-media-block>
     </div>
-</div>

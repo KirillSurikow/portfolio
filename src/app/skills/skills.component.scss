@@ -101,11 +101,17 @@
     cursor: pointer;
     color: white;
     border: none;
+    text-decoration: none;
 
     &:hover {
         background-color: #4B47FF;
         transform: scale(1.1);
     }
+}
+
+.anchorPortfolio{
+    position: absolute;
+    bottom: 20vh;
 }
 
 ///adjusting the headline
@@ -293,3 +299,23 @@
 }
 
 ///adjusting shadow end
+
+///adjusting the margin-top of this component
+
+@media(max-width:480px){
+    :host{
+        margin-top: 50px;
+    }
+}
+
+@media(max-width:420px){
+    :host{
+        margin-top: 100px;
+    }
+}
+
+@media(max-width:420px){
+    :host{
+        margin-top: 150px;
+    }
+}

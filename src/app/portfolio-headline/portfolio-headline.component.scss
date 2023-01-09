@@ -84,3 +84,11 @@
 }
 
 ///adjusting the headline end
+
+/// adjusting margin-top of the headline
+
+@media(max-width:800px) {
+    :host {
+        margin-top: 100px;
+    }
+}

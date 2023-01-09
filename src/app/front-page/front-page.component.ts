@@ -1,4 +1,4 @@
- import { Component, Input } from '@angular/core';
+ import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-front-page',
@@ -7,5 +7,4 @@
 })
 export class FrontPageComponent {
 
-  @Input() visible : boolean = false;
 }

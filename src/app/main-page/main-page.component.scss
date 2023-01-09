@@ -1,7 +1,7 @@
-
-.wrapper{
+.wrapper {
     width: 100%;
     overflow-y: auto;
+    overflow-x: hidden;
 
     app-front-page {
         width: 100%;
@@ -10,8 +10,6 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        transform: translateX(100vw);
-        transition: transform 250ms;
     }
 
     app-about-me {
@@ -19,7 +17,7 @@
         height: 100vh;
         display: flex;
     }
-    
+
     app-skills {
         width: 85vw;
         height: 100vh;
@@ -29,7 +27,12 @@
         position: relative;
         margin-left: 7.5vw;
     }
-    
+
+    app-portfolio-anchor {
+        height: 300px;
+        width: 100%;
+    }
+
     app-portfolio-headline {
         width: 100%;
         display: flex;
@@ -37,7 +40,7 @@
         justify-content: center;
         align-items: center;
     }
-    
+
     app-portfolio {
         width: 85vw;
         margin-top: 30px;
@@ -49,16 +52,16 @@
         position: relative;
         margin-left: 7.5vw;
     }
-    
+
     app-contact-headline {
-        margin-top: 20px;
+        margin-top: 20vh;
         width: 100%;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 1vw;
     }
-    
+
     app-contact {
         width: 100%;
         margin-top: 100px;
@@ -70,7 +73,7 @@
         position: relative;
         overflow-y: hidden;
     }
-    
+
     app-footer {
         width: 100%;
         height: 30vh;
@@ -82,7 +85,7 @@
     }
 
     ///adjusting skills layout
-    
+
     @media(max-width:925px) {
         app-skills {
             flex-direction: column-reverse;
@@ -91,35 +94,39 @@
             height: 120vh;
         }
     }
-    
+
     ////adjusting skills layout end
-    
+
     ///reducing margin of contact headline
-    
+
     @media (max-width:1010px) {
         app-contact-headline {
             margin-top: 0;
         }
     }
-    
+
     ///reducing margin of contact headline end
-    
+
     ///adjusting the height of app-contact
-    
+
     @media(max-width:550px) {
         app-contact {
             height: 100vh;
         }
     }
-    
+
     ///adjusting the height of app-contact end
-    
+
     ///switching footer to column layout
-    
-    
+
+
     @media (max-width: 660px) {
         app-footer {
             flex-direction: column;
         }
     }
+
+    ///switching footer to column layout end
+
+
 }

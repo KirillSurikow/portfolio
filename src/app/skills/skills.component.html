@@ -1,15 +1,15 @@
-<div class="callTABtnResponsive">
+<a data-aos="flip-up" class="callTABtnResponsive" routerLink="" fragment="portfolio" translate>
     Get in touch
-</div>
+</a>
 <div class="allSkills">
-    <div *ngFor="let skill of allSkills; let i = index" class="skill">
+    <div data-aos="flip-right" *ngFor="let skill of allSkills; let i = index"  class="skill">
         <img class="skillImg" src="./../../assets/img/skills/{{ skill.img }}" alt="">
         <div class="skillName">
              {{ skill.name }}
         </div>
     </div>
 </div>
-<div class="skillDescription">
+<div data-aos="flip-left" class="skillDescription">
     <div class="headlineBox">
         <h1 translate>My skills</h1>
         <div class="blueLine"></div>
@@ -21,4 +21,5 @@
         Get in touch
     </a>
 </div>
-<img class="shadow" src="./../../assets/img/photoShadows/shadowSkills.png">
+<div id="portfolio" class="anchorPortfolio"></div>
+<img data-aos="fade" class="shadow" src="./../../assets/img/photoShadows/shadowSkills.png">

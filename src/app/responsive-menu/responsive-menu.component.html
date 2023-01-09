@@ -1,4 +1,3 @@
-
 <div class="wrapper">
     <div class="header">
         <div class="innerHeader">
@@ -8,8 +7,19 @@
     </div>
     <div class="nav">
         <a (click)="closeRMenu()" routerLink="" fragment="aboutMe" translate>About me</a>
-        <a (click)="closeRMenu()" routerLink="" fragment="skills" translate>My Skills</a>
-        <a (click)="closeRMenu()" routerLink="" fragment="portfolio" translate >Portfolio</a>
+        <a (click)="closeRMenu()" routerLink="" fragment="skills" translate>Skills</a>
+        <a (click)="closeRMenu()" routerLink="" fragment="portfolio" translate>Portfolio</a>
         <a (click)="closeRMenu()" routerLink="" fragment="contact" translate>Contact</a>
+        <div class="translation">
+            <span (click)="translateToDE()">
+                DE
+            </span>
+            <span>
+                |
+            </span>
+            <span (click)="translateToEN()">
+                EN
+            </span>
+        </div>
     </div>
 </div>

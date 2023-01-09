@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -20,7 +20,6 @@ export class FooterComponent {
     },
   ]
 
-  @Input() visible : boolean = false;
   
   legalNotiveHover: boolean = false;
   dataProtectionHover: boolean = false;

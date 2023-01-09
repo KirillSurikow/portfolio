@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, OnInit, Input } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit,  } from '@angular/core';
 import { LanguageService } from '../services/language.service';
 
 
@@ -32,7 +32,7 @@ export class ContactComponent implements OnInit {
   @ViewChild('button')
   button!: ElementRef;
 
-  @Input() visible : boolean = false;
+
 
   ngOnInit() {
     this.language.languageChoosen.subscribe((lang: string) => {

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 @Component({
@@ -50,5 +50,5 @@ export class SkillsComponent {
     },
   ]
 
-  @Input() visible : boolean = false;
+
 }
