@@ -22,32 +22,32 @@
         <div>
             <input (input)="typing($event, 'name')" required type="text" placeholder="Your name"
                 pattern="[a-zA-Z0-9\s]{2,25}" minlength="2" maxlength="20" name="name" #namefield>
-            <span *ngIf="invalidName" class="error" aria-live="polite" translate>do not type '<' or '>' </span>
+            <span *ngIf="invalidName" class="error" aria-live="polite" translate>avoid greater- and smaller-than signs</span>
                     <span *ngIf="missingName" class="error" aria-live="polite" translate>please type a name</span>
         </div>
         <div>
             <input (input)="typing($event, 'mail')" required type="email" placeholder="Your email"
                 pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" minlength="6"
                 maxlength="30" #mailfield>
-            <span *ngIf="invalidEmail" class="error" aria-live="polite" translate>do not type '<' or '>' </span>
+            <span *ngIf="invalidEmail" class="error" aria-live="polite" translate>avoid greater- and smaller-than signs</span>
                     <span *ngIf="missingMail" class="error" aria-live="polite" translate>please type a mail-address
                     </span>
         </div>
         <div>
             <textarea (input)="typing($event, 'message')" required placeholder="Your message" name="message" cols="30"
                 rows="10" pattern="[a-zA-Z0-9!@#$%^*_|]{6,300}" minlength="2" maxlength="300" #messagefield></textarea>
-            <span *ngIf="invalidMessage" class="error" aria-live="polite" translate>do not type '<' or '>' </span>
+            <span *ngIf="invalidMessage" class="error" aria-live="polite" translate>avoid greater- and smaller-than signs</span>
                     <span *ngIf="missingMessage" class="error" aria-live="polite" translate>please type a message</span>
         </div>
         <button class="sendBtn" #button translate>Send message :)</button>
         <div [ngClass]="{'appear': messageSent}" class="notification">
             <span translate>Message sent</span>
-            <img src="./../../assets/img/navigation/check-mark.png">
+            <img src="assets/img/navigation/check-mark.png">
         </div>
     </form>
 </div>
 
-<img class="shadow" src="./../../assets/img/photoShadows/shadowContact.png">
+<img class="shadow" src="assets/img/photoShadows/shadowContact.png">
 <a class="scrollUpBtn" routerLink="" fragment="frontPage">
     <span class="material-symbols-outlined">
         arrow_circle_up

@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, OnInit,  } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit, } from '@angular/core';
 import { LanguageService } from '../services/language.service';
 
 
@@ -122,12 +122,13 @@ export class ContactComponent implements OnInit {
   async fetchFormular() {
     let fd = new FormData();
     fd.append('name', this.namefield.nativeElement.value);
-    fd.append('message', this.namefield.nativeElement.value);
-    await fetch('https://kirill-surikow.developerakademie.net/send_mail/send_mail.php'),
-    {
+    fd.append('message', this.messagefield.nativeElement.value);
+    fd.append('email', this.mailfield.nativeElement.value);
+    await fetch('https://kirill-surikow.developerakademie.net/send_mail/send_mail.php', {
       method: 'POST',
       body: fd
-    }
+    })
+
   }
 
   displayNotification() {

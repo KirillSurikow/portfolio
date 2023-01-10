@@ -33,6 +33,7 @@ import { DataProtectionComponent } from './data-protection/data-protection.compo
 import { PortraetComponent } from './portraet/portraet.component';
 import { AnchorContactComponent } from './anchor-contact/anchor-contact.component';
 
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -65,11 +66,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     DataProtectionComponent,
     PortraetComponent,
     AnchorContactComponent,
-    
-   
-   
-  
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,

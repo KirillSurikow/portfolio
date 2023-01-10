@@ -12,7 +12,7 @@ export class ResponsiveMenuComponent {
  @Output() 
   burgerMenuDeactivated : EventEmitter<boolean> = new EventEmitter <boolean>;
 
-  menuImg : string = './../../assets/img/navigation/closeMenu.png';
+  menuImg : string = 'assets/img/navigation/closeMenu.png';
   @Input() transitioning : boolean = false;
 
   constructor(public translate: TranslateService, private languageService: LanguageService) {
@@ -21,9 +21,9 @@ export class ResponsiveMenuComponent {
   }
 
   closeRMenu(){
-    this.menuImg = './../../assets/img/navigation/transitionMenu.png'
+    this.menuImg = 'assets/img/navigation/transitionMenu.png'
     this.burgerMenuDeactivated.emit(true)
-    setTimeout(() => this.menuImg = './../../assets/img/navigation/closeMenu.png', 250);
+    setTimeout(() => this.menuImg = 'assets/img/navigation/closeMenu.png', 250);
   }
 
   translateToDE(){
